@@ -1,40 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/create-next-app).
+# Next Full-Stack Learning Project
+
+A Next.js application built to understand modern full-stack TypeScript patterns with tRPC, Prisma, and mixed SSR/CSR architecture.
+
+## Overview
+
+This project demonstrates:
+- **Server-Side Rendering** with Next.js App Router
+- **Client-Side Rendering** for interactive components
+- **End-to-end type safety** with tRPC
+- **Database management** with Prisma migrations
+- **Modern React patterns** (Server Components + Client Components)
+
+## Features
+
+- User creation form with real-time validation
+- Mixed SSR/CSR page demonstrating both patterns
+- Type-safe API layer with tRPC
+- PostgreSQL database with Prisma ORM
+- Docker setup for local development
+
+## Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **API Layer**: tRPC with TanStack Query
+- **Database**: Prisma + PostgreSQL
+- **Styling**: Tailwind CSS
 
 ## Getting Started
-
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Start PostgreSQL
+docker-compose up -d
+
+# Setup database
+npx prisma db push
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000` to see the application.
 
-You can start editing the page by modifying `app/route.ts`. The page auto-updates as you edit the file.
+## Architecture Highlights
 
-## Learn More
+- **Server Components** for initial data loading and SEO
+- **Client Components** for forms and interactivity
+- **tRPC** for type-safe client-server communication
+- **Prisma migrations** for database schema management
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-## API Routes
-
-This directory contains example API routes for the headless API app.
-
-For more details, see [route.js file convention](https://nextjs.org/docs/app/api-reference/file-conventions/route).
+Built while studying modern full-stack TypeScript patterns.
